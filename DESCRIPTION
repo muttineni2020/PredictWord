@@ -1,0 +1,11 @@
+Package: PredictWord
+Type: Package
+Title: Predict Word
+Version: 0.1.0
+Author: Venkata Muttineni
+Maintainer: Venkata Muttineni <mnsl.vit2020@gmail.com>
+Date: 2018-01-10
+Description: It predicts words
+License: open
+Encoding: UTF-8
+LazyData: true
