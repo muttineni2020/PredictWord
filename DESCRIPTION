@@ -3,9 +3,13 @@ Type: Package
 Title: Predict Word
 Version: 0.1.0
 Author: Venkata Muttineni
+Imports: tm, stringi, RWeka, tidyr, Rcpp, parallel, slam (>= 0.1-37), stats, tools, utils,
+        graphics, xml2
 Maintainer: Venkata Muttineni <mnsl.vit2020@gmail.com>
 Date: 2018-01-10
 Description: It predicts words
-License: open
+License: GPL-3
 Encoding: UTF-8
-LazyData: false
+
+
+
