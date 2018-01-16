@@ -8,4 +8,4 @@ Date: 2018-01-10
 Description: It predicts words
 License: open
 Encoding: UTF-8
-LazyData: true
+LazyData: false
