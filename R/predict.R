@@ -9,7 +9,7 @@
 #   Check Package:             'Ctrl + Shift + E'
 #   Test Package:              'Ctrl + Shift + T'
 
-#options( java.parameters = "-Xmx6g")
+options( java.parameters = "-Xmx6g")
 
 
 library(stringi)
