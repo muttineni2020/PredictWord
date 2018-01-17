@@ -17,7 +17,6 @@ library(tm)
 library(RWeka)
 library(ggplot2)
 library(tidyr)
-library(memoise)
 
 print("Building the Predict model... Please wait")
 
@@ -105,23 +104,5 @@ colnames(quadGram)[1] <- "word"
 
 print("Generating Graph..")
 
-makePlot <- function(data, label) {
-  ggplot(data[1:30,], aes(reorder(word, -freq), freq)) +
-    labs(x = label, y = "Frequency") +
-    theme(axis.text.x = element_text(angle = 60, size = 12, hjust = 1)) +
-    geom_bar(stat = "identity", fill="#00c0ef")
-
-}
-
-makePlot <- memoise(makePlot)
-
-uniGraph <- makePlot(unigramFreq,"Top 30 common unigrams")
-uniGraph <- memoise(uniGraph)
-
-biGraph <- makePlot(bigramFreq,"Top 30 common bigrams")
-biGraph <- memoise(biGraph)
-
-triGraph <- makePlot(trigramFreq,"Top 30 common trigrams")
-triGraph <- memoise(triGraph)
 
 print("Success fully installed - Predict Word package")
