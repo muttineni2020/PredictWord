@@ -15,7 +15,7 @@ options( java.parameters = "-Xmx6g")
 library(stringi)
 library(tm)
 library(RWeka)
-#library(ggplot2)
+library(ggplot2)
 library(tidyr)
 
 
@@ -101,5 +101,24 @@ quadGram <- data.frame(quadgramFreq$word, separate(quadgramFreq,word,c("uword","
 colnames(biGram)[1] <- "word"
 colnames(triGram)[1] <- "word"
 colnames(quadGram)[1] <- "word"
+
+print("Generating Graph..")
+
+makePlot <- function(data, label) {
+  ggplot(data[1:30,], aes(reorder(word, -freq), freq)) +
+    labs(x = label, y = "Frequency") +
+    theme(axis.text.x = element_text(angle = 60, size = 12, hjust = 1)) +
+    geom_bar(stat = "identity", fill="#00c0ef")
+
+}
+
+uniGraph <- makePlot(unigramFreq,"Top 30 common unigrams")
+
+
+biGraph <- makePlot(bigramFreq,"Top 30 common bigrams")
+
+
+triGraph <- makePlot(trigramFreq,"Top 30 common trigrams")
+
 
 print("Success fully installed - Predict Word package")

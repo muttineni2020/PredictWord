@@ -3,7 +3,7 @@ Type: Package
 Title: Predict Word
 Version: 0.1.0
 Author: Venkata Muttineni
-Imports: tm, stringi, RWeka, tidyr, Rcpp, parallel, slam (>= 0.1-37), stats, tools, utils,
+Imports: tm, stringi, RWeka,ggplot2, tidyr, Rcpp, parallel, slam (>= 0.1-37), stats, tools, utils,
         graphics, xml2
 Maintainer: Venkata Muttineni <mnsl.vit2020@gmail.com>
 Date: 2018-01-10
